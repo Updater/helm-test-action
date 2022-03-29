@@ -1,0 +1,8 @@
+chart-dirs:
+  - charts
+debug: false
+excluded-charts:
+  - lib-common
+  - lib-canary-flagger
+remote: origin
+target-branch: main
