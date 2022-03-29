@@ -1,0 +1,15 @@
+chart-dirs:
+  - charts
+check-version-increment: true
+remote: origin
+target-branch: main
+validate-chart-schema: true
+validate-maintainers: false
+validate-yaml: true
+
+additional-commands: 
+  - helm dep list {{ .Path }}
+
+# exclude charts that use import-values due to https://github.com/helm/helm/issues/10038
+excluded-charts:
+  - example
